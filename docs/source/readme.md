@@ -127,7 +127,9 @@ make html
 
 修改 branch 和主页根目录为 ”_build/html” 目录。
 
-
-
 [actions工作流参考](https://coderefinery.github.io/documentation/gh_workflow/)
+
+## 解决加载不了 css、logo 的路径问题
+
+.nojekyll
 
