@@ -123,13 +123,21 @@ make html
 
 ## 上传github仓库
 
-作为 github.io 主页上传。
+作为`github.io`主页上传。
 
-修改 branch 和主页根目录为 ”_build/html” 目录。
+在github仓库设置中，修改 branch 和主页根目录为`/docs`目录。
 
 [actions工作流参考](https://coderefinery.github.io/documentation/gh_workflow/)
 
 ## 解决加载不了 css、logo 的路径问题
 
-.nojekyll
+解决方法：
+
+​		将一个空`.nojekyll`文件添加到 主页指定的根目录。
+
+​		在本例中，我是通过在`jstbob.github.io/docs`目录下创建文件解决的。
+
+问题发生原因：
+
+​		当您的站点使用以下划线开头的文件或目录时才需要这样做，因为 Jekyll 认为这些是特殊资源并且不会将它们复制到最终站点。
 
