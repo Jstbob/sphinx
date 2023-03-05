@@ -51,6 +51,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id1">添加md文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#html">运行构建html</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#github">上传github仓库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#csslogo">解决加载不了 css、logo 的路径问题</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="md/%E5%88%9B%E5%BB%BAwindows%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.html">创建windows驱动开发环境</a></li>
@@ -188,9 +189,17 @@ builddir：制定生成目录，这里由于github主页限制，必须制定&qu
 </section>
 <section id="github">
 <h2>上传github仓库<a class="headerlink" href="#github" title="此标题的永久链接"></a></h2>
-<p>作为 github.io 主页上传。</p>
-<p>修改 branch 和主页根目录为 ”_build/html” 目录。</p>
+<p>作为<code class="docutils literal notranslate"><span class="pre">github.io</span></code>主页上传。</p>
+<p>在github仓库设置中，修改 branch 和主页根目录为<code class="docutils literal notranslate"><span class="pre">/docs</span></code>目录。</p>
 <p><a class="reference external" href="https://coderefinery.github.io/documentation/gh_workflow/">actions工作流参考</a></p>
+</section>
+<section id="csslogo">
+<h2>解决加载不了 css、logo 的路径问题<a class="headerlink" href="#csslogo" title="此标题的永久链接"></a></h2>
+<p>解决方法：</p>
+<p>​		将一个空<code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code>文件添加到 主页指定的根目录。</p>
+<p>​		在本例中，我是通过在<code class="docutils literal notranslate"><span class="pre">jstbob.github.io/docs</span></code>目录下创建文件解决的。</p>
+<p>问题发生原因：</p>
+<p>​		当您的站点使用以下划线开头的文件或目录时才需要这样做，因为 Jekyll 认为这些是特殊资源并且不会将它们复制到最终站点。</p>
 </section>
 </section>
 
